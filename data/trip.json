@@ -1,81 +1,131 @@
 {
   "trip": {
-    "name": "Upcoming Trip",
-    "destination": "Destination TBD",
-    "startDate": "2026-09-01",
-    "endDate": "2026-09-05",
-    "notes": "Placeholder trip. Fill in real details in data/trip.json."
+    "name": "Spain: Madrid, San Sebastián & Bilbao",
+    "destination": "Madrid, San Sebastián & Bilbao, Spain",
+    "startDate": "2026-08-29",
+    "endDate": "2026-09-06",
+    "notes": "Travelers: Paul Gobron, Michelle Russo."
   },
   "transport": [
     {
       "id": "outbound-flight",
       "type": "flight",
-      "label": "Outbound flight",
-      "date": "2026-09-01",
-      "time": "9:00 AM",
-      "details": "Airline / flight number TBD",
-      "confirmation": ""
+      "label": "Newark (EWR) to Madrid (MAD)",
+      "date": "2026-08-29",
+      "time": "7:20 PM",
+      "details": "United Airlines UA51, United Polaris business. Arrives Sun, Aug 30 at 9:00 AM local time.",
+      "confirmation": "IB3C44"
     },
     {
       "id": "return-flight",
       "type": "flight",
-      "label": "Return flight",
-      "date": "2026-09-05",
-      "time": "5:00 PM",
-      "details": "Airline / flight number TBD",
-      "confirmation": ""
+      "label": "Bilbao (BIO) to Newark (EWR)",
+      "date": "2026-09-06",
+      "time": "12:30 PM",
+      "details": "United Airlines UA634, United Polaris business. Arrives 2:55 PM local time.",
+      "confirmation": "IB3C44"
+    },
+    {
+      "id": "hertz-rental",
+      "type": "car",
+      "label": "Hertz rental car: Madrid to San Sebastian",
+      "date": "2026-09-02",
+      "time": "12:00 PM",
+      "details": "BMW X3 or similar. Pick up at Madrid - Atocha Ave Railway Station (Estacion Madrid Atocha, Madrid 28012). Drop off same day, 4:00 PM, at San Sebastian Okendo (Calle Okendo 14, San Sebastian 20004). Bring driver's license, credit card, and passport. Total due at rental: 450.66 EUR. Hertz Gold+ member #66083457.",
+      "confirmation": "L5924448417"
     }
   ],
   "lodging": [
     {
-      "id": "hotel-1",
-      "name": "Hotel TBD",
-      "checkIn": "2026-09-01",
+      "id": "four-seasons-madrid",
+      "name": "Four Seasons Hotel Madrid",
+      "checkIn": "2026-08-30",
+      "checkOut": "2026-09-02",
+      "address": "Calle de Sevilla 3, Madrid 28014, Spain",
+      "confirmation": "9545SG073703-"
+    },
+    {
+      "id": "lasala-plaza-san-sebastian",
+      "name": "Lasala Plaza Hotel (Adults only) - Premium Room, Sea View",
+      "checkIn": "2026-09-02",
       "checkOut": "2026-09-05",
-      "address": "",
-      "confirmation": ""
+      "address": "Plaza Lasala 2, San Sebastian 20003, Spain",
+      "confirmation": "2465816446"
+    },
+    {
+      "id": "melia-bilbao",
+      "name": "Hotel Melia Bilbao - Supreme Mirador The Level",
+      "checkIn": "2026-09-05",
+      "checkOut": "2026-09-06",
+      "address": "Lehendakari Leizaola 29, Bilbao 48001, Spain",
+      "confirmation": "102-20679389"
     }
   ],
   "days": [
     {
-      "date": "2026-09-01",
-      "title": "Arrival",
+      "date": "2026-08-29",
+      "title": "Depart Newark",
       "items": [
-        { "time": "9:00 AM", "title": "Flight lands", "location": "", "notes": "" },
-        { "time": "1:00 PM", "title": "Check into hotel", "location": "", "notes": "" },
-        { "time": "7:00 PM", "title": "Dinner (TBD)", "location": "", "notes": "" }
+        { "time": "7:20 PM", "title": "Flight departs: UA51 to Madrid", "location": "Newark Liberty Airport (EWR)", "notes": "Overnight flight, arrives Madrid 9:00 AM the next morning." }
+      ]
+    },
+    {
+      "date": "2026-08-30",
+      "title": "Arrive Madrid",
+      "items": [
+        { "time": "9:00 AM", "title": "Flight lands: UA51 from Newark", "location": "Adolfo Suarez Madrid-Barajas Airport (MAD)", "notes": "" },
+        { "time": "3:00 PM", "title": "Check into Four Seasons Hotel Madrid", "location": "Calle de Sevilla 3, Madrid", "notes": "" }
+      ]
+    },
+    {
+      "date": "2026-08-31",
+      "title": "Madrid",
+      "items": []
+    },
+    {
+      "date": "2026-09-01",
+      "title": "Madrid",
+      "items": [
+        { "time": "7:00 PM", "title": "Dinner at Toga Restaurante", "location": "C. de Juanelo, 23, 28012 Madrid", "notes": "2 people, reservation ID 6A91C8. Table held until 8:30 PM." }
       ]
     },
     {
       "date": "2026-09-02",
-      "title": "Day 2",
+      "title": "Madrid to San Sebastian",
       "items": [
-        { "time": "9:00 AM", "title": "Breakfast", "location": "", "notes": "" },
-        { "time": "11:00 AM", "title": "Activity TBD", "location": "", "notes": "" }
+        { "time": "12:00 PM", "title": "Check out of Four Seasons Hotel Madrid", "location": "Calle de Sevilla 3, Madrid", "notes": "" },
+        { "time": "12:00 PM", "title": "Pick up Hertz rental car (BMW X3 or similar)", "location": "Madrid - Atocha Ave Railway Station, Estacion Madrid Atocha, Madrid", "notes": "Confirmation L5924448417. Bring driver's license, credit card, and passport." },
+        { "time": "4:00 PM", "title": "Drop off rental car in San Sebastian", "location": "San Sebastian Okendo, Calle Okendo 14, San Sebastian", "notes": "" },
+        { "time": "", "title": "Check into Lasala Plaza Hotel", "location": "Plaza Lasala 2, San Sebastian", "notes": "Check-in available from 3:00 PM." },
+        { "time": "9:00 PM", "title": "Dinner at Amelia Restaurant", "location": "Republica Argentina Kalea 4, Hotel Maria Cristina, San Sebastian", "notes": "2 guests, tasting menu only, reservation 7ZZFKJ4DPYCS. Runs until midnight." }
       ]
     },
     {
       "date": "2026-09-03",
-      "title": "Day 3",
+      "title": "San Sebastian",
       "items": [
-        { "time": "9:00 AM", "title": "Breakfast", "location": "", "notes": "" },
-        { "time": "11:00 AM", "title": "Activity TBD", "location": "", "notes": "" }
+        { "time": "5:00 PM", "title": "Culinary Backstreets food tour: The Real Basque Way, San Sebastian Beyond the Stars", "location": "Meeting point: in front of Hotel de Londres, waterside, under the shade structure", "notes": "2 adults, booking #251605294621414. Tour leader Panos, +34 685 18 68 02. Michelle has a no pork/shellfish note on file." }
       ]
     },
     {
       "date": "2026-09-04",
-      "title": "Day 4",
-      "items": [
-        { "time": "9:00 AM", "title": "Breakfast", "location": "", "notes": "" },
-        { "time": "11:00 AM", "title": "Activity TBD", "location": "", "notes": "" }
-      ]
+      "title": "San Sebastian",
+      "items": []
     },
     {
       "date": "2026-09-05",
-      "title": "Departure",
+      "title": "San Sebastian to Bilbao",
       "items": [
-        { "time": "10:00 AM", "title": "Check out of hotel", "location": "", "notes": "" },
-        { "time": "5:00 PM", "title": "Flight departs", "location": "", "notes": "" }
+        { "time": "12:00 PM", "title": "Check out of Lasala Plaza Hotel", "location": "Plaza Lasala 2, San Sebastian", "notes": "" },
+        { "time": "3:00 PM", "title": "Check into Hotel Melia Bilbao", "location": "Lehendakari Leizaola 29, Bilbao", "notes": "" }
+      ]
+    },
+    {
+      "date": "2026-09-06",
+      "title": "Depart Bilbao",
+      "items": [
+        { "time": "12:00 PM", "title": "Check out of Hotel Melia Bilbao", "location": "Lehendakari Leizaola 29, Bilbao", "notes": "" },
+        { "time": "12:30 PM", "title": "Flight departs: UA634 to Newark", "location": "Bilbao Airport (BIO)", "notes": "Arrives Newark 2:55 PM." }
       ]
     }
   ],
@@ -86,7 +136,7 @@
     },
     {
       "category": "Clothes",
-      "items": ["Everyday outfits", "Comfortable shoes", "Jacket / layers", "Sleepwear"]
+      "items": ["Everyday outfits", "Comfortable shoes", "Jacket / layers", "Sleepwear", "Dinner outfit (Toga Restaurante + Amelia Restaurant)"]
     },
     {
       "category": "Toiletries",
@@ -97,18 +147,5 @@
       "items": ["Phone charger", "Headphones", "Camera"]
     }
   ],
-  "ideas": [
-    {
-      "id": "idea-1",
-      "name": "Restaurant idea TBD",
-      "category": "restaurant",
-      "notes": ""
-    },
-    {
-      "id": "idea-2",
-      "name": "Activity idea TBD",
-      "category": "activity",
-      "notes": ""
-    }
-  ]
+  "ideas": []
 }
