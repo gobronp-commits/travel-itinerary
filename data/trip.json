@@ -1,0 +1,114 @@
+{
+  "trip": {
+    "name": "Upcoming Trip",
+    "destination": "Destination TBD",
+    "startDate": "2026-09-01",
+    "endDate": "2026-09-05",
+    "notes": "Placeholder trip. Fill in real details in data/trip.json."
+  },
+  "transport": [
+    {
+      "id": "outbound-flight",
+      "type": "flight",
+      "label": "Outbound flight",
+      "date": "2026-09-01",
+      "time": "9:00 AM",
+      "details": "Airline / flight number TBD",
+      "confirmation": ""
+    },
+    {
+      "id": "return-flight",
+      "type": "flight",
+      "label": "Return flight",
+      "date": "2026-09-05",
+      "time": "5:00 PM",
+      "details": "Airline / flight number TBD",
+      "confirmation": ""
+    }
+  ],
+  "lodging": [
+    {
+      "id": "hotel-1",
+      "name": "Hotel TBD",
+      "checkIn": "2026-09-01",
+      "checkOut": "2026-09-05",
+      "address": "",
+      "confirmation": ""
+    }
+  ],
+  "days": [
+    {
+      "date": "2026-09-01",
+      "title": "Arrival",
+      "items": [
+        { "time": "9:00 AM", "title": "Flight lands", "location": "", "notes": "" },
+        { "time": "1:00 PM", "title": "Check into hotel", "location": "", "notes": "" },
+        { "time": "7:00 PM", "title": "Dinner (TBD)", "location": "", "notes": "" }
+      ]
+    },
+    {
+      "date": "2026-09-02",
+      "title": "Day 2",
+      "items": [
+        { "time": "9:00 AM", "title": "Breakfast", "location": "", "notes": "" },
+        { "time": "11:00 AM", "title": "Activity TBD", "location": "", "notes": "" }
+      ]
+    },
+    {
+      "date": "2026-09-03",
+      "title": "Day 3",
+      "items": [
+        { "time": "9:00 AM", "title": "Breakfast", "location": "", "notes": "" },
+        { "time": "11:00 AM", "title": "Activity TBD", "location": "", "notes": "" }
+      ]
+    },
+    {
+      "date": "2026-09-04",
+      "title": "Day 4",
+      "items": [
+        { "time": "9:00 AM", "title": "Breakfast", "location": "", "notes": "" },
+        { "time": "11:00 AM", "title": "Activity TBD", "location": "", "notes": "" }
+      ]
+    },
+    {
+      "date": "2026-09-05",
+      "title": "Departure",
+      "items": [
+        { "time": "10:00 AM", "title": "Check out of hotel", "location": "", "notes": "" },
+        { "time": "5:00 PM", "title": "Flight departs", "location": "", "notes": "" }
+      ]
+    }
+  ],
+  "packing": [
+    {
+      "category": "Documents",
+      "items": ["Passport / ID", "Boarding passes", "Travel insurance", "Confirmation printouts"]
+    },
+    {
+      "category": "Clothes",
+      "items": ["Everyday outfits", "Comfortable shoes", "Jacket / layers", "Sleepwear"]
+    },
+    {
+      "category": "Toiletries",
+      "items": ["Toothbrush / toothpaste", "Medications", "Sunscreen"]
+    },
+    {
+      "category": "Electronics",
+      "items": ["Phone charger", "Headphones", "Camera"]
+    }
+  ],
+  "ideas": [
+    {
+      "id": "idea-1",
+      "name": "Restaurant idea TBD",
+      "category": "restaurant",
+      "notes": ""
+    },
+    {
+      "id": "idea-2",
+      "name": "Activity idea TBD",
+      "category": "activity",
+      "notes": ""
+    }
+  ]
+}
