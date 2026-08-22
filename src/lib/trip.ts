@@ -25,6 +25,7 @@ export type Lodging = {
   checkOut: string;
   address: string;
   confirmation: string;
+  photoKey: string;
 };
 
 export type ItineraryItem = {
@@ -52,11 +53,27 @@ export type Idea = {
   notes: string;
 };
 
+export type CityHighlight = {
+  title: string;
+  blurb: string;
+  photoKey: string;
+};
+
+export type City = {
+  id: string;
+  name: string;
+  dateRange: string;
+  lodgingId: string;
+  photoKey: string;
+  highlights: CityHighlight[];
+};
+
 export type TripData = {
   trip: Trip;
   transport: TransportLeg[];
   lodging: Lodging[];
   days: ItineraryDay[];
+  cities: City[];
   packing: PackingCategory[];
   ideas: Idea[];
 };
@@ -73,6 +90,14 @@ export function getTransport(): TransportLeg[] {
 
 export function getLodging(): Lodging[] {
   return data.lodging;
+}
+
+export function getLodgingById(id: string): Lodging | undefined {
+  return data.lodging.find((l) => l.id === id);
+}
+
+export function getCities(): City[] {
+  return data.cities;
 }
 
 export function getDays(): ItineraryDay[] {

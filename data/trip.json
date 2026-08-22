@@ -42,7 +42,8 @@
       "checkIn": "2026-08-30",
       "checkOut": "2026-09-02",
       "address": "Calle de Sevilla 3, Madrid 28014, Spain",
-      "confirmation": "9545SG073703-"
+      "confirmation": "9545SG073703-",
+      "photoKey": "fourSeasonsMadrid"
     },
     {
       "id": "lasala-plaza-san-sebastian",
@@ -50,7 +51,8 @@
       "checkIn": "2026-09-02",
       "checkOut": "2026-09-05",
       "address": "Plaza Lasala 2, San Sebastian 20003, Spain",
-      "confirmation": "2465816446"
+      "confirmation": "2465816446",
+      "photoKey": "lasalaPlaza"
     },
     {
       "id": "melia-bilbao",
@@ -58,7 +60,8 @@
       "checkIn": "2026-09-05",
       "checkOut": "2026-09-06",
       "address": "Lehendakari Leizaola 29, Bilbao 48001, Spain",
-      "confirmation": "102-20679389"
+      "confirmation": "102-20679389",
+      "photoKey": "meliaBilbao"
     }
   ],
   "days": [
@@ -127,6 +130,49 @@
         { "time": "12:00 PM", "title": "Check out of Hotel Melia Bilbao", "location": "Lehendakari Leizaola 29, Bilbao", "notes": "" },
         { "time": "12:30 PM", "title": "Flight departs: UA634 to Newark", "location": "Bilbao Airport (BIO)", "notes": "Arrives Newark 2:55 PM." }
       ]
+    }
+  ],
+  "cities": [
+    {
+      "id": "madrid",
+      "name": "Madrid",
+      "dateRange": "Aug 30 – Sep 2, 2026",
+      "lodgingId": "four-seasons-madrid",
+      "photoKey": "madrid",
+      "highlights": [
+        {
+          "title": "Dinner at Toga Restaurante",
+          "blurb": "Tasting-menu dinner, Tue Sep 1 at 7:00 PM.",
+          "photoKey": "madridTapas"
+        }
+      ]
+    },
+    {
+      "id": "san-sebastian",
+      "name": "San Sebastián",
+      "dateRange": "Sep 2 – Sep 5, 2026",
+      "lodgingId": "lasala-plaza-san-sebastian",
+      "photoKey": "sanSebastian",
+      "highlights": [
+        {
+          "title": "Dinner at Amelia Restaurant",
+          "blurb": "Seafood tasting menu at Hotel Maria Cristina, Wed Sep 2 at 9:00 PM.",
+          "photoKey": "basqueFood"
+        },
+        {
+          "title": "Culinary Backstreets food tour",
+          "blurb": "\"The Real Basque Way: Beyond the Stars\" pintxos tour, Thu Sep 3 at 5:00 PM.",
+          "photoKey": "basqueFood"
+        }
+      ]
+    },
+    {
+      "id": "bilbao",
+      "name": "Bilbao",
+      "dateRange": "Sep 5 – Sep 6, 2026",
+      "lodgingId": "melia-bilbao",
+      "photoKey": "bilbao",
+      "highlights": []
     }
   ],
   "packing": [
