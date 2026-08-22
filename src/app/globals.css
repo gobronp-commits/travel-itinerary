@@ -1,11 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #16302b;
-  --navy: #0e3b36;
-  --accent: #e2793d;
-  --accent-soft: #e2793d14;
+  --ink: #1c1917;
+  --paper: #faf9f5;
+  --accent: #e2451f;
+  --accent-soft: #e2451f14;
+  --line: #1c191726;
+  --background: var(--paper);
+  --foreground: var(--ink);
 }
 
 @theme inline {
@@ -16,15 +18,9 @@
   --font-heading: var(--font-heading);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0b1614;
-    --foreground: #eef2f0;
-    --navy: #082622;
-    --accent: #f0975a;
-    --accent-soft: #f0975a1f;
-  }
-}
+/* Fixed editorial theme: the black hero / off-white body contrast is part of
+   the design itself, not a light/dark mode - it stays the same regardless of
+   system preference. */
 
 body {
   background: var(--background);

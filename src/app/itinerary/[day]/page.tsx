@@ -19,51 +19,42 @@ export default async function DayPage({
     <div>
       <Link
         href="/itinerary"
-        className="text-sm text-black/50 dark:text-white/50 hover:text-[var(--accent)]"
+        className="text-xs font-bold uppercase tracking-wider text-[var(--ink)]/50 hover:text-[var(--accent)]"
       >
         ← Itinerary
       </Link>
 
-      <h1 className="font-heading text-2xl uppercase tracking-wide mt-2">
+      <h1 className="font-heading font-black text-3xl uppercase tracking-tight mt-2">
         {day.title}
       </h1>
-      <p className="text-sm text-black/60 dark:text-white/60 mt-1">
-        {formatDate(day.date)}
-      </p>
+      <p className="text-sm text-[var(--ink)]/60 mt-1">{formatDate(day.date)}</p>
 
       <div className="mt-8 space-y-4">
         {day.items.map((item, idx) => (
-          <div
-            key={idx}
-            className="flex gap-4 rounded-lg border border-black/10 dark:border-white/15 p-4"
-          >
-            <div className="font-heading text-sm text-[var(--accent)] w-20 shrink-0">
+          <div key={idx} className="flex gap-4 border border-[var(--ink)]/15 p-4">
+            <div className="font-heading font-bold text-sm text-[var(--accent)] w-20 shrink-0">
               {item.time}
             </div>
             <div>
-              <div className="font-medium">{item.title}</div>
+              <div className="font-bold">{item.title}</div>
               {item.location && (
                 <a
                   href={mapsSearchUrl(item.location)}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-sm text-black/60 dark:text-white/60 hover:text-[var(--accent)] hover:underline underline-offset-2"
+                  className="text-sm text-[var(--ink)]/60 hover:text-[var(--accent)] hover:underline underline-offset-2"
                 >
                   {item.location}
                 </a>
               )}
               {item.notes && (
-                <p className="text-sm text-black/50 dark:text-white/50 mt-1">
-                  {item.notes}
-                </p>
+                <p className="text-sm text-[var(--ink)]/50 mt-1">{item.notes}</p>
               )}
             </div>
           </div>
         ))}
         {day.items.length === 0 && (
-          <p className="text-sm text-black/50 dark:text-white/50">
-            Nothing scheduled yet.
-          </p>
+          <p className="text-sm text-[var(--ink)]/50">Nothing scheduled yet.</p>
         )}
       </div>
     </div>

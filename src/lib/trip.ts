@@ -3,6 +3,9 @@ import raw from "../../data/trip.json";
 export type Trip = {
   name: string;
   destination: string;
+  travelers: string;
+  tagline: string;
+  summary: string;
   startDate: string;
   endDate: string;
   notes: string;
@@ -62,6 +65,7 @@ export type CityHighlight = {
 export type City = {
   id: string;
   name: string;
+  shortName: string;
   dateRange: string;
   lodgingId: string;
   photoKey: string;
@@ -132,6 +136,21 @@ export function formatDateShort(iso: string) {
     month: "short",
     day: "numeric",
   });
+}
+
+export function daysUntil(dateIso: string, from: Date = new Date()): number {
+  const [y, m, d] = dateIso.split("-").map(Number);
+  const target = new Date(y, m - 1, d);
+  const fromMidnight = new Date(from.getFullYear(), from.getMonth(), from.getDate());
+  return Math.round((target.getTime() - fromMidnight.getTime()) / 86_400_000);
+}
+
+export function nightsBetween(checkIn: string, checkOut: string): number {
+  const [y1, m1, d1] = checkIn.split("-").map(Number);
+  const [y2, m2, d2] = checkOut.split("-").map(Number);
+  const a = new Date(y1, m1 - 1, d1);
+  const b = new Date(y2, m2 - 1, d2);
+  return Math.round((b.getTime() - a.getTime()) / 86_400_000);
 }
 
 export function mapsSearchUrl(query: string) {

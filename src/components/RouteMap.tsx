@@ -39,7 +39,7 @@ export default function RouteMap() {
   } ${SAN_SEBASTIAN.x},${SAN_SEBASTIAN.y} L${BILBAO.x},${BILBAO.y}`;
 
   return (
-    <div className="rounded-xl border border-black/10 dark:border-white/15 bg-[var(--accent-soft)] p-4 sm:p-6">
+    <div className="border-2 border-[var(--ink)] bg-[var(--paper)] p-4 sm:p-6">
       <svg
         viewBox="0 0 400 330"
         className="w-full h-auto"
@@ -48,7 +48,7 @@ export default function RouteMap() {
       >
         <path
           d={SPAIN_OUTLINE}
-          className="fill-[var(--navy)]/[0.06] dark:fill-white/[0.08] stroke-[var(--navy)]/20 dark:stroke-white/20"
+          className="fill-[var(--ink)]/[0.05] stroke-[var(--ink)]/25"
           strokeWidth={1.5}
         />
         <path

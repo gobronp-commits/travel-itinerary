@@ -49,7 +49,7 @@ export default function PackingList({
     <div className="grid sm:grid-cols-2 gap-6">
       {categories.map((cat) => (
         <div key={cat.category}>
-          <h2 className="font-heading text-sm uppercase tracking-wide text-[var(--accent)] mb-3 pb-1 border-b-2 border-[var(--accent)]/25">
+          <h2 className="text-xs font-bold uppercase tracking-wider text-[var(--accent)] mb-3 pb-2 border-b-2 border-[var(--ink)]">
             {cat.category}
           </h2>
           <ul className="space-y-2">
@@ -65,11 +65,7 @@ export default function PackingList({
                       className="accent-[var(--accent)]"
                     />
                     <span
-                      className={
-                        checked[id]
-                          ? "line-through text-black/40 dark:text-white/40"
-                          : ""
-                      }
+                      className={checked[id] ? "line-through text-[var(--ink)]/40" : ""}
                     >
                       {item}
                     </span>

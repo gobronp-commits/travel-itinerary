@@ -10,12 +10,7 @@ export default function Photo({
   return (
     <figure className={`relative overflow-hidden ${className}`}>
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={photo.url}
-        alt={photo.alt}
-        className="w-full h-full object-cover"
-        loading="lazy"
-      />
+      <img src={photo.url} alt={photo.alt} className="w-full h-full object-cover" />
       {photo.credit && (
         <a
           href={photo.creditUrl}

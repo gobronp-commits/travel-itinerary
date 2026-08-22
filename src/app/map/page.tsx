@@ -31,17 +31,17 @@ export default function MapPage() {
 
   return (
     <div>
-      <h1 className="font-heading text-2xl uppercase tracking-wide mb-1">
+      <h1 className="font-heading font-black text-3xl uppercase tracking-tight mb-1">
         Map
       </h1>
-      <p className="text-sm text-black/60 dark:text-white/60 mb-6">
+      <p className="text-sm text-[var(--ink)]/60 mb-6">
         Places from the itinerary, lodging, and ideas. Each one opens in
         Google Maps.
       </p>
 
       {groups.map((group) => (
         <section key={group.title} className="mb-8">
-          <h2 className="font-heading text-sm uppercase tracking-wide text-[var(--accent)] mb-3 pb-1 border-b-2 border-[var(--accent)]/25">
+          <h2 className="text-xs font-bold uppercase tracking-wider text-[var(--accent)] mb-3 pb-2 border-b-2 border-[var(--ink)]">
             {group.title}
           </h2>
           {group.places.length > 0 ? (
@@ -52,24 +52,20 @@ export default function MapPage() {
                   href={mapsSearchUrl(place.name)}
                   target="_blank"
                   rel="noreferrer"
-                  className="flex items-center justify-between rounded-lg border border-black/10 dark:border-white/15 p-3 hover:border-[var(--accent)] transition-colors"
+                  className="flex items-center justify-between border border-[var(--ink)]/15 p-3 hover:border-[var(--accent)] transition-colors"
                 >
                   <div>
-                    <div className="font-medium">{place.name}</div>
-                    <div className="text-xs text-black/50 dark:text-white/50">
-                      {place.subtitle}
-                    </div>
+                    <div className="font-bold">{place.name}</div>
+                    <div className="text-xs text-[var(--ink)]/50">{place.subtitle}</div>
                   </div>
-                  <span className="text-xs text-[var(--accent)]">
+                  <span className="text-xs font-bold uppercase tracking-wider text-[var(--accent)]">
                     View on map →
                   </span>
                 </a>
               ))}
             </div>
           ) : (
-            <p className="text-sm text-black/50 dark:text-white/50">
-              Nothing here yet.
-            </p>
+            <p className="text-sm text-[var(--ink)]/50">Nothing here yet.</p>
           )}
         </section>
       ))}

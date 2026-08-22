@@ -1,7 +1,10 @@
 {
   "trip": {
-    "name": "Spain: Madrid, San Sebastián & Bilbao",
+    "name": "Spain Is On",
     "destination": "Madrid, San Sebastián & Bilbao, Spain",
+    "travelers": "Paul & Michelle",
+    "tagline": "Nine days. Three cities. One absurd amount of pintxos. You're invited to follow along.",
+    "summary": "Tasting menus at Toga and Amelia, a backstreet pintxos tour, and one Hertz BMW X3 pointed north through the Basque hills.",
     "startDate": "2026-08-29",
     "endDate": "2026-09-06",
     "notes": "Travelers: Paul Gobron, Michelle Russo."
@@ -136,6 +139,7 @@
     {
       "id": "madrid",
       "name": "Madrid",
+      "shortName": "Madrid",
       "dateRange": "Aug 30 – Sep 2, 2026",
       "lodgingId": "four-seasons-madrid",
       "photoKey": "madrid",
@@ -150,6 +154,7 @@
     {
       "id": "san-sebastian",
       "name": "San Sebastián",
+      "shortName": "San Seb.",
       "dateRange": "Sep 2 – Sep 5, 2026",
       "lodgingId": "lasala-plaza-san-sebastian",
       "photoKey": "sanSebastian",
@@ -169,6 +174,7 @@
     {
       "id": "bilbao",
       "name": "Bilbao",
+      "shortName": "Bilbao",
       "dateRange": "Sep 5 – Sep 6, 2026",
       "lodgingId": "melia-bilbao",
       "photoKey": "bilbao",
