@@ -9,8 +9,6 @@ import {
 } from "@/lib/trip";
 import { getPhoto } from "@/lib/photos";
 import Photo from "@/components/Photo";
-import RouteMap from "@/components/RouteMap";
-import CitySection from "@/components/CitySection";
 import DaysOutBadge from "@/components/DaysOutBadge";
 import AddToCalendarButton from "@/components/AddToCalendarButton";
 
@@ -21,8 +19,8 @@ export default function Home() {
   const heroPhoto = getPhoto("sanSebastian");
 
   return (
-    <div>
-      <div className="border-2 border-[var(--ink)] mb-14">
+    <div className="min-h-dvh flex items-center justify-center p-4">
+      <div className="w-full max-w-md border-2 border-[var(--ink)]">
         <div className="bg-[var(--ink)] text-[var(--paper)] p-4 sm:p-6">
           <div className="flex justify-between text-xs font-bold uppercase tracking-wider text-[var(--paper)]/70 mb-6">
             <span>{trip.travelers}</span>
@@ -41,7 +39,7 @@ export default function Home() {
           <h1 className="font-heading font-black text-5xl sm:text-6xl uppercase tracking-tight leading-[0.95] mb-4">
             {trip.name}
           </h1>
-          <p className="text-base text-[var(--paper)]/85 max-w-md">{trip.tagline}</p>
+          <p className="text-base text-[var(--paper)]/85">{trip.tagline}</p>
         </div>
 
         <div className="p-4 sm:p-6">
@@ -50,11 +48,11 @@ export default function Home() {
               const lodging = getLodgingById(city.lodgingId);
               const nights = lodging ? nightsBetween(lodging.checkIn, lodging.checkOut) : 0;
               return (
-                <div key={city.id} className="p-3 sm:p-4">
+                <div key={city.id} className="p-3">
                   <div className="text-xs font-bold uppercase tracking-wider text-[var(--ink)]/50">
                     {city.shortName}
                   </div>
-                  <div className="font-heading font-black text-lg sm:text-xl mt-0.5">
+                  <div className="font-heading font-black text-lg mt-0.5">
                     {nights} {nights === 1 ? "night" : "nights"}
                   </div>
                 </div>
@@ -62,7 +60,7 @@ export default function Home() {
             })}
           </div>
 
-          <p className="text-sm text-[var(--ink)]/70 mb-6 max-w-md">{trip.summary}</p>
+          <p className="text-sm text-[var(--ink)]/70 mb-6">{trip.summary}</p>
 
           <div className="flex flex-col gap-3">
             <Link
@@ -74,23 +72,6 @@ export default function Home() {
             <AddToCalendarButton trip={trip} days={days} />
           </div>
         </div>
-      </div>
-
-      <div className="mb-14">
-        <RouteMap />
-      </div>
-
-      {cities.map((city) => (
-        <CitySection key={city.id} city={city} />
-      ))}
-
-      <div className="flex flex-wrap gap-3">
-        <Link
-          href="/lodging"
-          className="inline-block text-sm font-bold uppercase tracking-wider border-2 border-[var(--ink)] px-4 py-2.5 hover:bg-[var(--ink)] hover:text-[var(--paper)] transition-colors"
-        >
-          Lodging &amp; transport details →
-        </Link>
       </div>
     </div>
   );

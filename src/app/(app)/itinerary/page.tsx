@@ -1,17 +1,33 @@
 import Link from "next/link";
-import { getDays, formatDate } from "@/lib/trip";
+import { getDays, getCities, formatDate } from "@/lib/trip";
+import CitySection from "@/components/CitySection";
+import RealMap from "@/components/RealMapClient";
 
 export default function ItineraryPage() {
   const days = getDays();
+  const cities = getCities();
 
   return (
     <div>
       <h1 className="font-heading font-black text-3xl uppercase tracking-tight mb-1">
-        Itinerary
+        The Whole Plan
       </h1>
       <p className="text-sm text-[var(--ink)]/60 mb-6">
-        Day-by-day schedule for the trip.
+        Madrid, San Sebastián &amp; Bilbao — Aug 29 to Sep 6.
       </p>
+
+      <div className="mb-14">
+        <RealMap />
+      </div>
+
+      {cities.map((city) => (
+        <CitySection key={city.id} city={city} />
+      ))}
+
+      <h2 className="font-heading font-black text-2xl uppercase tracking-tight mb-1">
+        Day by Day
+      </h2>
+      <p className="text-sm text-[var(--ink)]/60 mb-6">Full schedule, one day at a time.</p>
 
       <div className="space-y-3">
         {days.map((day) => (
